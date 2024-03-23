@@ -175,5 +175,5 @@ metadata.yaml
 io_config.yaml
 *__init__.py
 personal.txt
-/dbt*
+dbt*
 
