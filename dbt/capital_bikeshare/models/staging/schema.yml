@@ -1,0 +1,55 @@
+version: 2
+
+sources:
+  - name: staging
+    database: cosmic-talent-386914
+    schema: capitalbike_share
+    tables:
+      - name: bikeshare_data
+
+models:
+  - name: stg_bikeshare_data
+
+    description: >
+      These are bike trips made in the capital DC. 
+      Capital Bikeshare is Metro DC's bikeshare system, with 700+ stations and 6,000 bikes across the metro area. 
+      Meet the fleet, get trip tips, and do the capital right.
+
+    columns:
+        - name: ride_id
+          description: Unique identifier for each ride
+          tests:
+            - unique
+        - name: bike_type
+          description: Type or model of the bike used for the ride
+        - name: start_station_name
+          description: Name of the station where the ride started
+        - name: start_station_id
+          description: Identifier for the station where the ride started
+        - name: end_station_name
+          description: Name of the station where the ride ended
+        - name: end_station_id
+          description: Identifier for the station where the ride ended
+        - name: start_lat
+          description: Latitude of the starting location
+        - name: start_lng
+          description: Longitude of the starting location
+        - name: end_lat
+          description: Latitude of the ending location
+        - name: end_lng
+          description: Longitude of the ending location
+        - name: membership_type
+          description: Type of membership or subscription used for the bike ride
+        - name: start_datetime
+          description: Date and time when the ride started
+          tests:
+            - not_null
+        - name: end_datetime
+          description: Date and time when the ride ended
+          tests:
+            - not_null
+
+
+        
+
+
