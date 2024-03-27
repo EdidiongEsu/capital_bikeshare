@@ -35,9 +35,9 @@ select
 
 from bike_data
 
--- dbt build --m <model.sql> --var 'is_test_run: false'
+-- dbt build --select stg_bikeshare_data.sql --var '{'is_test_run': 'false'}'
 {% if var('is_test_run', default=true) %}
 
-  limit 100
+  limit 1000
 
 {% endif %}

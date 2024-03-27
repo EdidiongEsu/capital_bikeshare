@@ -1,25 +1,52 @@
-{{ config(materialized="table") }}
+{{ config(materialized='table') }}
 
-WITH ride_duration AS (
+-- Join the staging data with the dimension tables
+WITH bike_data AS (
     SELECT
-        ride_id,
-        TIMESTAMP_DIFF(end_datetime, start_datetime, SECOND) AS duration_seconds
+        -- identifiers
+        CAST(ride_id AS STRING) AS ride_id,
+        CAST(start_station_id AS INTEGER) AS start_station_id,
+        CAST(end_station_id AS INTEGER) AS end_station_id,
+        -- timestamps
+        CAST(start_datetime AS TIMESTAMP) AS start_datetime,
+        CAST(end_datetime AS TIMESTAMP) AS end_datetime,
+        -- bike information
+        CAST(bike_type AS STRING) AS bike_type,
+        -- trip information
+        CAST(start_station_name AS STRING) AS start_station_name,
+        CAST(end_station_name AS STRING) AS end_station_name,
+        CAST(start_latitude AS NUMERIC) AS start_latitude,
+        CAST(start_longitude AS NUMERIC) AS start_longitude,
+        CAST(end_latitude AS NUMERIC) AS end_latitude,
+        CAST(end_longitude AS NUMERIC) AS end_longitude,
+        -- customer info
+        CAST(membership_type AS STRING) AS membership_type
     FROM
         {{ ref('stg_bikeshare_data') }}
 )
 
 SELECT
-    ride_id,
-    start_station_id,
-    end_station_id,
-    bike_type AS bike_type_id,
-    membership_type AS membership_type_id,
-    start_datetime,
-    end_datetime,
-    duration_seconds AS duration,
-    -- Calculate distance traveled based on start and end locations (using Haversine formula, for example)
-
+    bd.ride_id,
+    bd.start_station_id,
+    bd.end_station_id,
+    bd.start_datetime,
+    bd.end_datetime,
+    -- Calculate duration in seconds
+    TIMESTAMP_DIFF(bd.end_datetime, bd.start_datetime, SECOND) AS duration,
+    bd.bike_type,
+    bd.start_station_name,
+    bd.end_station_name,
+    s.station_id AS start_station_id_fk,
+    e.station_id AS end_station_id_fk,
+    m.membership_type_id,
+    t.bike_type_id
 FROM
-    {{ ref('stg_bikeshare_data') }}
-JOIN
-    ride_duration USING (ride_id);
+    bike_data bd
+LEFT JOIN
+    {{ ref('dim_stations') }} s ON bd.start_station_id = s.station_id
+LEFT JOIN
+    {{ ref('dim_stations') }} e ON bd.end_station_id = e.station_id
+LEFT JOIN
+    {{ ref('dim_bike_membership') }} m ON bd.membership_type = m.membership_type
+LEFT JOIN
+    {{ ref('dim_bike_types') }} t ON bd.bike_type = t.bike_type

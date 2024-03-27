@@ -2,13 +2,15 @@ version: 2
 
 models:
   - name: fact_bike_trips
-    description: >
-      fact bike data
+    description: fact bike data
 
   - name: dim_bike_types
     description: bike types
   
   - name: dim_bike_membership
     description: membershio subscription
+
+  - name: dim_stations
+    description: Contains information on bike stations
   
 
