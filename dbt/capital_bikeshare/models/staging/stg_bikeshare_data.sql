@@ -2,7 +2,7 @@
 
 with bike_data as
 (
-    select * from {{ source('staging','bikeshare_data') }}
+    select * from {{ source('src','bikeshare_data') }}
     where ride_id is not null
 )
 
