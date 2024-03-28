@@ -32,20 +32,25 @@ SELECT
     bd.start_datetime,
     bd.end_datetime,
     -- Calculate duration in seconds
-    TIMESTAMP_DIFF(bd.end_datetime, bd.start_datetime, SECOND) AS duration,
+    TIMESTAMP_DIFF(bd.end_datetime, bd.start_datetime, SECOND) AS duration_seconds,
     bd.bike_type,
     bd.start_station_name,
     bd.end_station_name,
-    s.station_id AS start_station_id_fk,
-    e.station_id AS end_station_id_fk,
+    bd.start_latitude,
+    bd.start_longitude,
+    bd.end_latitude,
+    bd.end_longitude,
+    ---Calculate distance in meters using created distance_from_cordinates macro
+    {{ distance_from_cordinates('bd.start_longitude', 'bd.start_latitude', 'bd.end_longitude', 'bd.end_latitude') }},
+    
+    bd.membership_type,
+    s.station_id AS station_id_fk,
     m.membership_type_id,
     t.bike_type_id
 FROM
     bike_data bd
 LEFT JOIN
     {{ ref('dim_stations') }} s ON bd.start_station_id = s.station_id
-LEFT JOIN
-    {{ ref('dim_stations') }} e ON bd.end_station_id = e.station_id
 LEFT JOIN
     {{ ref('dim_bike_membership') }} m ON bd.membership_type = m.membership_type
 LEFT JOIN
