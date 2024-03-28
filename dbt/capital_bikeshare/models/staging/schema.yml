@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: staging
+  - name: src
     database: cosmic-talent-386914
     schema: capitalbike_share
     tables:

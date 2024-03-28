@@ -2,15 +2,15 @@
 
 with bike_data as
 (
-    select * from {{ source('staging','bikeshare_data') }}
+    select * from {{ source('src','bikeshare_data') }}
     where ride_id is not null
 )
 
 select
     -- identifiers
     cast(ride_id as string) as ride_id,
-    cast(start_station_id as integer) as start_station_id,
-    cast(end_station_id as integer) as end_station_id,
+    CASE WHEN REGEXP_CONTAINS(start_station_id, r'^[0-9]+$') THEN cast(start_station_id as integer) ELSE NULL END as start_station_id,
+    CASE WHEN REGEXP_CONTAINS(end_station_id, r'^[0-9]+$') THEN cast(end_station_id as integer) ELSE NULL END as end_station_id,
 
     -- timestamps
     cast(start_datetime as timestamp) as start_datetime,
@@ -24,10 +24,10 @@ select
     cast(end_station_name as string) as end_station_name,
     
         -- Replace null values with 'Unknown' for latitude and longitude columns
-    coalesce(start_lat, CAST('Unknown' AS NUMERIC)) as start_latitude,
-    coalesce(start_lng, CAST('Unknown' AS NUMERIC)) as start_longitude,
-    coalesce(end_lat, CAST('Unknown' AS NUMERIC)) as end_latitude,
-    coalesce(end_lng, CAST('Unknown' AS NUMERIC)) as end_longitude,
+    cast(start_lat AS NUMERIC) as start_latitude,
+    cast(start_lng AS NUMERIC) as start_longitude,
+    cast(end_lat AS NUMERIC) as end_latitude,
+    cast(end_lng AS NUMERIC) as end_longitude,
 
 
     -- - customer info
@@ -35,9 +35,9 @@ select
 
 from bike_data
 
--- dbt build --m <model.sql> --var 'is_test_run: false'
+-- dbt build --select stg_bikeshare_data.sql --vars '{'is_test_run': 'false'}'
 {% if var('is_test_run', default=true) %}
 
-  limit 100
+  limit 1000
 
 {% endif %}
