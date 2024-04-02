@@ -32,10 +32,11 @@ Dataset columns from source:
 ## Technologies
 - [Docker](https://www.docker.com/):- Containerization of applications -- build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 - [Google Cloud Storage](https://cloud.google.com/storage) GCS - Data Lake for storage
-- [Google Cloud BigQuery] (https://cloud.google.com/bigquery) - Data warehouse for analytical purposes
+- [Google Cloud BigQuery](https://cloud.google.com/bigquery) - Data warehouse for analytical purposes
 - [Terraform](https://www.terraform.io/) - Infrastructure as code (Infrastructure automation to provision and manage resources in any cloud or data center.)
 - [Mage](https://docs.mage.ai/introduction/overview) -  Data and workflow orchestration 
 - [Dbt](https://www.getdbt.com/)- For analytics engineering via data transformation
 - [Looker studio](https://lookerstudio.google.com/) - Data Visualization
 
 ## Project Architecture
+![alt text](img/Bike architecture.gif)
