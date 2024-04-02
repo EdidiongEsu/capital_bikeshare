@@ -3,13 +3,32 @@
 ## Overview
 This project extracts, moves and analyzes DC's [Capital Bikeshare](https://ride.capitalbikeshare.com) data.
 
-Where do Capital Bikeshare riders go? When do they ride? How far do they go? Which stations are most popular? What days of the week are most rides taken on? This project attempts to extract the data, move, store and analyze the insights to answer key questions about Washighton DC's Capital BikeShare.
+Where do Capital Bikeshare riders go? When do they ride? How far do they go? Which stations are most popular? What days of the week are most rides taken on? 
+This project attempts to extract the data, move, store and analyze the insights to answer some key questions about Washighton DC's Capital BikeShare.
 
 ## Project Objective
 Succesfully move data from Source, transform and Visualize in a dashboard.
 Key Deliverables:
 - Create end to end pipeline to move data by batching to analytical warehouse
 - Build analytical dashboard to showcase insights
+
+## Navigation / Quick Access
+Quickly move to section you are interested in
+- [Project Architecture](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#project-architecture)
+- [Dataset](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dataset)
+- [Technologies](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#technologies)
+- [Reproducing Project](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#reproducing-project)
+- [Dashboard](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dashboard)
+
+
+## Project Architecture
+![Alt text](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Bike%20architecture.gif)
+
+The data architecture is an overview of the end-to-end pipeline which include:
+- Ingesting of source dataset to google cloud storage
+- Moving data and staging in a dataware house which is big query
+- transforming the data using dbt via dbt cloud
+- Creation of dashboard with Looker studio
 
 ## Dataset
 The project's data source can be accessed [here](https://ride.capitalbikeshare.com/system-data)
@@ -38,5 +57,20 @@ Dataset columns from source:
 - [Dbt](https://www.getdbt.com/)- For analytics engineering via data transformation
 - [Looker studio](https://lookerstudio.google.com/) - Data Visualization
 
-## Project Architecture
-![Alt text](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Bike%20architecture.gif)
+## Reproducing project
+This section will give a thorough breakdown of how to reproduce project
+
+### 1) Pre-requisites
+1) Set up GCP account
+2) Install terraform on machine via this [link](https://developer.hashicorp.com/terraform/install) and watch this [tutorial](https://www.youtube.com/watch?v=Y2ux7gq3Z0o&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=12&pp=iAQB) on terraform basics
+3) Install Docker via this [link](https://docs.docker.com/engine/install/)
+
+### 2) Google Cloud Platform (GCP)
+- Setup up GCP free account if you don't have an account
+- Create a new project and take note of the ID
+- 
+
+## Dashboard
+
+
+
