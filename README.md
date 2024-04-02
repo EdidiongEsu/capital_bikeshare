@@ -20,9 +20,12 @@ Dataset columns from source:
 - started_at – Includes start date and time
 - ended_at – Includes end date and time
 - start_station_name – Includes starting station name
-- start_station_id - UNique id of start station
+- start_station_id - Unique id of start station
 - end_station_name – Includes ending station name
-- start_station_id - UNique id of start station
-- Bike Number – Includes ID number of bike used for the trip
-- Member Type – Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass, 3-Day Pass or 5-Day Pass)
-	rideable_type	started_at	ended_at	start_station_name	start_station_id	end_station_name	end_station_id	start_lat	start_lng	end_lat	end_lng	member_casual
+- end_station_id - Unique id of end station
+- start_lat - Start Latitude of bike trip
+- start_lng - Start Longitude of bike trip
+- end_lat - End Latitude of bike trip
+- end_lng - End Longitude of bike trip
+- member_casual- Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass, 3-Day Pass or 5-Day Pass)
+
