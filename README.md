@@ -39,4 +39,4 @@ Dataset columns from source:
 - [Looker studio](https://lookerstudio.google.com/) - Data Visualization
 
 ## Project Architecture
-![alt text](img/Bike architecture.gif)
+![Alt text](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Bike%20architecture.gif)
