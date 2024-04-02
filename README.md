@@ -14,10 +14,15 @@ Key Deliverables:
 ## Dataset
 The project's data source can be accessed [here](https://ride.capitalbikeshare.com/system-data)
 
-Duration – Duration of trip
-Start Date – Includes start date and time
-End Date – Includes end date and time
-Start Station – Includes starting station name and number
-End Station – Includes ending station name and number
-Bike Number – Includes ID number of bike used for the trip
-Member Type – Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass, 3-Day Pass or 5-Day Pass)
+Dataset columns from source:
+- ride_id - Unique key for each ride
+- rideable_type - Bike type used
+- started_at – Includes start date and time
+- ended_at – Includes end date and time
+- start_station_name – Includes starting station name
+- start_station_id - UNique id of start station
+- end_station_name – Includes ending station name
+- start_station_id - UNique id of start station
+- Bike Number – Includes ID number of bike used for the trip
+- Member Type – Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass, 3-Day Pass or 5-Day Pass)
+	rideable_type	started_at	ended_at	start_station_name	start_station_id	end_station_name	end_station_id	start_lat	start_lng	end_lat	end_lng	member_casual
