@@ -13,7 +13,7 @@ Key Deliverables:
 - Build analytical dashboard to showcase insights
 
 ## Navigation / Quick Access
-Quickly move to section you are interested in
+Quickly move to section you are interested in:
 - [Project Architecture](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#project-architecture)
 - [Dataset](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dataset)
 - [Technologies](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#technologies)
@@ -71,6 +71,12 @@ This section will give a thorough breakdown of how to reproduce project
 - 
 
 ## Dashboard
+The live dashboard can be viewed [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
+
+Two dashboard were created as summarized below:
+
+![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Summarized_dash.png)
+
 
 
 
