@@ -12,9 +12,7 @@ Key Deliverables:
 - Build analytical dashboard to showcase insights
 
 ## Dataset
-Each month, we publish downloadable files of Capital Bikeshare trip data. The data includes:
-
-https://ride.capitalbikeshare.com/system-data
+The project's data source can be accessed [here](https://ride.capitalbikeshare.com/system-data)
 
 Duration – Duration of trip
 Start Date – Includes start date and time
