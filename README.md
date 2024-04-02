@@ -4,7 +4,9 @@
 This project extracts, moves and analyzes DC's [Capital Bikeshare](https://ride.capitalbikeshare.com) data.
 
 Where do Capital Bikeshare riders go? When do they ride? How far do they go? Which stations are most popular? What days of the week are most rides taken on? 
-This project attempts to extract the data, move, store and analyze the insights to answer some key questions about Washighton DC's Capital BikeShare.
+This project successfully attempts to extract the data, move, store and analyze the insights to answer some key questions about Washighton DC's Capital BikeShare.
+
+This project was created as part of the requirement needed for [DataTalksClub](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main) certification.
 
 ## Project Objective
 Succesfully move data from Source, transform and Visualize in a dashboard.
@@ -68,14 +70,17 @@ This section will give a thorough breakdown of how to reproduce project
 ### 2) Google Cloud Platform (GCP)
 - Setup up GCP free account if you don't have an account
 - Create a new project and take note of the ID
-- 
+- Set up service account
 
 ## Dashboard
 The live dashboard can be viewed [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
 
-Two dashboard were created as summarized below:
+Two dashboard pages were created as summarized below:
 
-![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Summarized_dash.png)
+![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash1.jpg)
+![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash2.jpg)
+
+
 
 
 
