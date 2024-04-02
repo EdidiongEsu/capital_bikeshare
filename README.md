@@ -22,10 +22,10 @@ Dataset columns from source:
 - start_station_name – Includes starting station name
 - start_station_id - Unique id of start station
 - end_station_name – Includes ending station name
-- end_station_id - Unique id of end station
+- end_station_id - Unique id of ending station
 - start_lat - Start Latitude of bike trip
 - start_lng - Start Longitude of bike trip
-- end_lat - End Latitude of bike trip
-- end_lng - End Longitude of bike trip
+- end_lat - Latitude the bike trips end
+- end_lng - Longitude the bike trips end
 - member_casual- Indicates whether user was a "registered" member (Annual Member, 30-Day Member or Day Key Member) or a "casual" rider (Single Trip, 24-Hour Pass, 3-Day Pass or 5-Day Pass)
 
