@@ -12,16 +12,15 @@ This project was created as part of the requirement needed for [DataTalksClub](h
 Succesfully move data from Source, transform and Visualize in a dashboard.
 Key Deliverables:
 - Create end to end pipeline to move data by batching to analytical warehouse
-- Build analytical dashboard to showcase insights
+- Design and build analytical dashboard to showcase insights
 
 ## Navigation / Quick Access
-Quickly move to section you are interested in:
+Quickly move to section you are interested in by clicking on appropriate link:
 - [Project Architecture](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#project-architecture)
 - [Dataset](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dataset)
 - [Technologies](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#technologies)
-- [Reproducing Project](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#reproducing-project)
+- [Reproducing Project](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#reproducing-project) (very long section)
 - [Dashboard](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dashboard)
-
 
 ## Project Architecture
 ![Alt text](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Bike%20architecture.gif)
@@ -73,12 +72,13 @@ This section will give a thorough breakdown of how to reproduce project
 - Set up service account
 
 ## Dashboard
-The live dashboard can be viewed [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
+The live dashboard can be viewed and interacted with [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
 
-Two dashboard pages were created as summarized below:
+Two dashboard pages were created as shown below below:
 
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash1.jpg)
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash2.jpg)
+
 
 
 
