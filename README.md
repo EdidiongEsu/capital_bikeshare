@@ -172,6 +172,7 @@ Check [here](https://www.youtube.com/watch?v=V2m5C0n8Gro&list=PL3MmuxUbc_hJed7dX
 3) Start building dashboard
 4) Several calculated fields are created in order to create dashboard in next section.
 
+---
 ## Dashboard
 The live dashboard created as part of this project can be viewed and interacted with [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
 
@@ -181,9 +182,9 @@ Two dashboard pages were created as shown below:
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash2.jpg)
 
 ## Contact
-Please reach out to me on [LinkedIn](https://www.linkedin.com/in/edidiong-esu-1942a2129/) for thoughts and/or issues encountered during reproduction of project. Let's chat!
+Please reach out to me on [LinkedIn](https://www.linkedin.com/in/edidiong-esu-1942a2129/) for thoughts and/or issues encountered during reproduction of project. Let's chat:star:!.
 
-**Happy Coding!**
+**Happy Coding!:computer:**
 
 
 
