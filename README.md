@@ -118,16 +118,17 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 
 7. Go to edit pipelines and create the pipelines to resemble the structure below and code in the pipeline folders. Ensure to edit resource name in code to match yours.
 
-<center>
-<table><tr>
+<table class="center">
+<tr>
 <td> <img src="img/api_to_gcs.PNG" width="250"/> </td>
 <td> <img src="img/gcs_to_bq.PNG" width="250"/> </td>
 <tr>
 <td>1. Pipeline to move data from S3 to gcs</td>
 <td>2. Pipeline to move data from gcs to big query</td>
 </tr>
-</tr></table>
-</center>
+</tr>
+</table>
+
 
 You can watch this [Video](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=24&pp=iAQB) and the playlist to understand more.
 8. Execute Pipelines in the order above, then you should have data in big query.
@@ -165,15 +166,23 @@ Check [here](https://www.youtube.com/watch?v=V2m5C0n8Gro&list=PL3MmuxUbc_hJed7dX
 8. Two new columns, duration and distance are created during the dbt transformation. Refer to this [code](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/dbt/capital_bikeshare/models/core/fact_bike_trips.sql) for the details
 
 ### 6) Looker Studio
+1) Create a blank report on looker
+2) Select the bigquery connector and connect to the transformed data in the dbt production warehouse
+3) Start building dashboard
+4) Several calculated fields are created in order to replicate dashboard in next section
 
 ## Dashboard
-The live dashboard can be viewed and interacted with [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
+The live dashboard created as part of this project can be viewed and interacted with [here](https://lookerstudio.google.com/reporting/51073509-b2e1-4909-a20f-60d02f303c1d)
 
 Two dashboard pages were created as shown below below:
 
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash1.jpg)
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/Dash2.jpg)
 
+## Contact
+Please reach out to me on [LinkedIn](https://www.linkedin.com/in/edidiong-esu-1942a2129/) for thoughts and/or issues encountered during reproduction of project. Let's chat!
+
+**Happy Coding**
 
 
 
