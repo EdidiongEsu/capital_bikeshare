@@ -92,7 +92,10 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 11) The second Video shows how to create a config file to aid update the External IPs of the compute instance anytime you suspend/restart the compute instance. Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier.
 12) Go to your terminal and ssh into your remote instance.
 
-![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/ssh.PNG)
+<p align="center">
+    <img src="https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/ssh.PNG">
+</p>
+
 
 ### 4) Mage 
 1) `cd` into the mage directory. Rename `dev.env` to `.env`. You will notice there are some postgres configurations there. That can be removed. 
@@ -106,6 +109,7 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 6) Your file structure in mage will look like this:
 
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/magestructure.PNG)
+
 7) Go to edit pipelines and create the pipelines to resemble the structure below and code in the pipeline folders. Ensure to edit resource name in code to match yours.
 <table><tr>
 <td> <img src="img/api_to_gcs.PNG" width="200"/> </td>
