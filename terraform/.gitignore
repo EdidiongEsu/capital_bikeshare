@@ -1,4 +1,4 @@
-variables.tf
+main_variables.tf
 *.json
 
 # Local .terraform directories
