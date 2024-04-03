@@ -118,7 +118,7 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 
 7. Go to edit pipelines and create the pipelines to resemble the structure below and code in the pipeline folders. Ensure to edit resource name in code to match yours.
 
-<p align="center">
+<center>
 <table><tr>
 <td> <img src="img/api_to_gcs.PNG" width="250"/> </td>
 <td> <img src="img/gcs_to_bq.PNG" width="250"/> </td>
@@ -127,7 +127,7 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 <td>2. Pipeline to move data from gcs to big query</td>
 </tr>
 </tr></table>
-</p>
+</center>
 
 You can watch this [Video](https://www.youtube.com/watch?v=w0XmcASRUnc&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=24&pp=iAQB) and the playlist to understand more.
 8. Execute Pipelines in the order above, then you should have data in big query.
@@ -146,7 +146,7 @@ I used dbt cloud for this project but you can decide to code locally. Refer to [
 4. When done, DAG should resemble this:
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/dag_model.PNG)
 
-5. Compile and build `dbt build` model. A $${\color{green}Successfull}$$ build is $${\color{green}green}$$
+5. Compile and build `dbt build` model. A $\color{green}{successful}$ build is $\color{green}{green}$
 
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/dbt_build.PNG)
 
