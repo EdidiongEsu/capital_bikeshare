@@ -90,7 +90,8 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 9) **Do this only when necessary** --- Use `terraform destroy` to destroy previously-created infrastructure. 
 10) (Optional if using compute engine) -- Create an ssh to connect with your compute instance. You can refer to this [Video](https://www.youtube.com/watch?v=vw-j8Tm3OmM) and this [longer Video](https://www.youtube.com/watch?v=ae-CV2KfoN0&list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb&index=15) for detailed explanation and how to connect via Vs code.
 11) The second Video shows how to create a config file to aid update the External IPs of the compute instance anytime you suspend/restart the compute instance. Remember the compute engine is a virtual machine and a local machine can be used for this project but it does make things easier.
-12) Go to your terminal and ssh into your remote instance
+12) Go to your terminal and ssh into your remote instance.
+
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/ssh.PNG)
 
 ### 4) Mage 
@@ -98,9 +99,12 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 2) Ensure that docker has already been installed as indicated above.
 3) Run `docker compose build` to build mage using docker.
 4) Once the image has been created. Run `docker compose up -d` in your terminal to initialize the mage application. Ensure your port has been forwarded since you are on a virtual machine (if you used the compute instance).
+
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/port.PNG)
+
 5) Navigate to http://localhost:6789 in your browser to access mage application
 6) Your file structure in mage will look like this:
+
 ![image](https://github.com/EdidiongEsu/capital_bikeshare/blob/main/img/magestructure.PNG)
 7) Go to edit pipelines and create the pipelines to resemble the structure below and code in the pipeline folders. Ensure to edit resource name in code to match yours.
 <table><tr>
