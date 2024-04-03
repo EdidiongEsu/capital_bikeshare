@@ -6,7 +6,7 @@ Quickly move to section you are interested in by clicking on appropriate link:
 - [Project Architecture](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#project-architecture)
 - [Dataset](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dataset)
 - [Technologies](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#technologies)
-- [Reproducing Project](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#reproducing-project) (very long section)
+- [Reproducing Project](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#reproducing-project) (long section)
 - [Dashboard](https://github.com/EdidiongEsu/capital_bikeshare/tree/main#dashboard)
 
 ---
@@ -119,10 +119,10 @@ Terraform is infrastructure as cloud and it will be used to create and destroy G
 7. Go to edit pipelines and create the pipelines to resemble the structure below and code in the pipeline folders. Ensure to edit resource name in code to match yours.
 
 <table class="center">
-<tr>
+<tr class="center">
 <td> <img src="img/api_to_gcs.PNG" width="250"/> </td>
 <td> <img src="img/gcs_to_bq.PNG" width="250"/> </td>
-<tr>
+<tr class="center">
 <td>1. Pipeline to move data from S3 to gcs</td>
 <td>2. Pipeline to move data from gcs to big query</td>
 </tr>
